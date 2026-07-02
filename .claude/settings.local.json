@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls -la \"C:\\\\Users\\\\moni0\\\\OneDrive\\\\Documentos\\\\Midterm II - Claude Code & Agents\" 2>&1; echo \"---\"; ls -la \"C:\\\\Users\\\\moni0\\\\OneDrive\\\\Documentos\\\\Midterm II - Claude Code & Agents\\\\data\" 2>&1; echo \"---\"; ls -la \"C:\\\\Users\\\\moni0\\\\AppData\\\\Local\\\\Temp\\\\latam_finanzas_2025 \\(2\\).csv\" 2>&1)",
+      "Bash(mkdir -p data scripts)",
+      "Bash(cp \"C:\\\\Users\\\\moni0\\\\AppData\\\\Local\\\\Temp\\\\latam_finanzas_2025 \\(2\\).csv\" \"data/latam_finanzas_2025.csv\")",
+      "Bash(python -c \"import pandas\")",
+      "Bash(pip install *)",
+      "Bash(python scripts/01_explore.py)",
+      "Bash(PYTHONIOENCODING=utf-8 python -c ' *)",
+      "Bash(cat /tmp_check.txt)",
+      "Bash(PYTHONIOENCODING=utf-8 python scripts/01_explore.py)",
+      "Bash(PYTHONIOENCODING=utf-8 python scripts/02_clean.py)"
+    ]
+  }
+}
