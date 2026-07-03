@@ -17,7 +17,13 @@
       "Bash(PYTHONIOENCODING=utf-8 python scripts/country_brasil.py)",
       "Bash(PYTHONIOENCODING=utf-8 python scripts/country_colombia.py)",
       "Bash(PYTHONIOENCODING=utf-8 python scripts/country_chile.py)",
-      "Bash(PYTHONIOENCODING=utf-8 python \"scripts/country_colombia.py\")"
+      "Bash(PYTHONIOENCODING=utf-8 python \"scripts/country_colombia.py\")",
+      "Bash(python -c \"import tabulate; print\\('ok'\\)\")",
+      "Bash(python -c \"import scipy; print\\('scipy ok'\\)\")",
+      "Bash(PYTHONIOENCODING=utf-8 python scripts/03_analyse.py)",
+      "Bash(python -c \"import matplotlib; print\\(matplotlib.__version__\\)\")",
+      "Bash(mkdir -p charts)",
+      "Bash(PYTHONIOENCODING=utf-8 python scripts/04_visualise.py)"
     ]
   }
 }
