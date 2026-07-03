@@ -10,7 +10,14 @@
       "Bash(PYTHONIOENCODING=utf-8 python -c ' *)",
       "Bash(cat /tmp_check.txt)",
       "Bash(PYTHONIOENCODING=utf-8 python scripts/01_explore.py)",
-      "Bash(PYTHONIOENCODING=utf-8 python scripts/02_clean.py)"
+      "Bash(PYTHONIOENCODING=utf-8 python scripts/02_clean.py)",
+      "Bash(powershell -Command \"Start-Sleep -Seconds 1\")",
+      "Bash(PYTHONIOENCODING=utf-8 python scripts/country_peru.py)",
+      "PowerShell($env:PYTHONIOENCODING=\"utf-8\"; python \"C:\\\\Users\\\\moni0\\\\OneDrive\\\\Documentos\\\\Midterm II - Claude Code & Agents\\\\scripts\\\\country_argentina.py\")",
+      "Bash(PYTHONIOENCODING=utf-8 python scripts/country_brasil.py)",
+      "Bash(PYTHONIOENCODING=utf-8 python scripts/country_colombia.py)",
+      "Bash(PYTHONIOENCODING=utf-8 python scripts/country_chile.py)",
+      "Bash(PYTHONIOENCODING=utf-8 python \"scripts/country_colombia.py\")"
     ]
   }
 }
