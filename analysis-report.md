@@ -1,8 +1,8 @@
-# Reporte de Exploracion Inicial - latam_finanzas_2025
+# Initial Exploration Report - latam_finanzas_2025
 
-Dataset: encuesta financiera a 500 profesionales jovenes de Latinoamerica.
+Dataset: financial survey of 500 young professionals from Latin America.
 
-Prompt usado
+Prompt used
 
 I'm starting a data analysis project. The dataset is at data/latam_finanzas_2025.csv
 and it contains survey responses from 500 young professionals across Latin America.
@@ -24,56 +24,56 @@ Do the unique values look clean? Any typos or inconsistencies?
 Which columns have missing values and how many?
 Do the min/max values make sense for each column?
 
-## 1. Dimensiones
+## 1. Dimensions
 
-- Filas: 500
-- Columnas: 21
+- Rows: 500
+- Columns: 21
 
-## . Valores faltantes
+## . Missing values
 
-Solo una columna tiene valores nulos:
+Only one column has null values:
 
-| Columna         | Faltantes | % |
+| Column          | Missing | % |
 | gasto_salud_usd | 33        | 6.6% |
 
-## 4. Estadisticas de columnas numericas
+## 4. Numeric column statistics
 
-| Columna                      | min    | max       | mean     | median  | std      |
-|------------------------------|--------|---------- |----------|---      |---       |
-| edad                         | 18.00  | 32.00     | 24.96    | 25.00   | 4.22     |
-| ingreso_mensual_usd          | 300.00 | 2,874.49  | 1,016.80 | 960.34  | 376.81   |
-| gasto_vivienda_usd           | 55.61  | 796.33    | 290.32   | 267.87  | 125.03   |
-| gasto_alimentacion_usd       | 60.00  | 741.66    | 242.61   | 227.78  | 102.79   |
-| gasto_transporte_usd         | 20.00  | 300.58    | 102.19   | 94.57   | 49.31    |
-| gasto_entretenimiento_usd    | 10.00  | 410.21    | 88.56    | 79.05   | 50.25    |
-| gasto_educacion_usd          | 10.37  | 211.31    | 82.18    | 80.32   | 33.85    |
-| gasto_salud_usd              | 0.00   | 150.23    | 49.88    | 45.66   | 28.61    |
-| ahorro_mensual_usd           | -160.02| 451.38    | 99.00    | 92.44   | 95.59    |
-| deuda_total_usd              | 0.00   | 10,918.73 | 1,849.69 | 0.00    | 2,565.57 |
-| horas_herramientas_ia_semana | 0.00   | 16.10     | 5.41     | 5.20    | 2.70     |
-| satisfaccion_financiera      | 1.00   | 5.00      | 2.48     | 2.00    | 0.62     |
+| Column                        | min    | max       | mean     | median  | std      |
+|--------------------------------|--------|---------- |----------|---      |---       |
+| edad (age)                     | 18.00  | 32.00     | 24.96    | 25.00   | 4.22     |
+| ingreso_mensual_usd (monthly income) | 300.00 | 2,874.49  | 1,016.80 | 960.34  | 376.81   |
+| gasto_vivienda_usd (housing spend)   | 55.61  | 796.33    | 290.32   | 267.87  | 125.03   |
+| gasto_alimentacion_usd (food spend)  | 60.00  | 741.66    | 242.61   | 227.78  | 102.79   |
+| gasto_transporte_usd (transport spend) | 20.00  | 300.58    | 102.19   | 94.57   | 49.31    |
+| gasto_entretenimiento_usd (entertainment spend) | 10.00  | 410.21    | 88.56    | 79.05   | 50.25    |
+| gasto_educacion_usd (education spend)  | 10.37  | 211.31    | 82.18    | 80.32   | 33.85    |
+| gasto_salud_usd (health spend)         | 0.00   | 150.23    | 49.88    | 45.66   | 28.61    |
+| ahorro_mensual_usd (monthly savings)   | -160.02| 451.38    | 99.00    | 92.44   | 95.59    |
+| deuda_total_usd (total debt)           | 0.00   | 10,918.73 | 1,849.69 | 0.00    | 2,565.57 |
+| horas_herramientas_ia_semana (AI tool hours/week) | 0.00   | 16.10     | 5.41     | 5.20    | 2.70     |
+| satisfaccion_financiera (financial satisfaction) | 1.00   | 5.00      | 2.48     | 2.00    | 0.62     |
 
-## 5. Columnas categoricas
+## 5. Categorical columns
 
-**pais** (6 valores): Mexico 150, Colombia 80, Argentina 70, Chile 70, Brasil 65, Peru 65
+**pais (country)** (6 values): Mexico 150, Colombia 80, Argentina 70, Chile 70, Brazil 65, Peru 65
 
-**industria**:
-- Cruda (13 valores, con inconsistencias): Finanzas 66, Ingenieria 53, Ventas 51, Salud 49, Marketing 49, Tecnologia 47, Educacion 45, Diseno 45, Recursos Humanos 44, Retail 41, Tecnologia (sin tilde) 5, tech 3, TECNOLOGIA (mayusculas) 2
-- Limpia (10 valores): Finanzas 66, Tecnologia 57, Ingenieria 53, Ventas 51, Salud 49, Marketing 49, Educacion 45, Diseno 45, Recursos Humanos 44, Retail 41
+**industria (industry)**:
+- Raw (13 values, with inconsistencies): Finance 66, Engineering 53, Sales 51, Health 49, Marketing 49, Technology 47, Education 45, Design 45, Human Resources 44, Retail 41, Technology (no accent) 5, tech 3, TECHNOLOGY (uppercase) 2
+- Clean (10 values): Finance 66, Technology 57, Engineering 53, Sales 51, Health 49, Marketing 49, Education 45, Design 45, Human Resources 44, Retail 41
 
-**ocupacion** (10 valores): Disenador Grafico 56, Ingeniero 55, Community Manager 52, Gerente de Proyectos 51, Contador 50, Analista Financiero 50, Representante de Ventas 49, Coordinador de Marketing 47, Especialista en RRHH 47, Docente 43
+**ocupacion (occupation)** (10 values): Graphic Designer 56, Engineer 55, Community Manager 52, Project Manager 51, Accountant 50, Financial Analyst 50, Sales Representative 49, Marketing Coordinator 47, HR Specialist 47, Teacher 43
 
-**meta_financiera** (8 valores): Pagar deudas 81, Invertir en bolsa 75, Ahorrar para retiro 68, Ahorrar para viaje 61, Comprar casa 61, Emprender un negocio 58, Estudiar posgrado 52, Fondo de emergencia 44
+**meta_financiera (financial goal)** (8 values): Pay off debt 81, Invest in stock market 75, Save for retirement 68, Save for travel 61, Buy a house 61, Start a business 58, Graduate studies 52, Emergency fund 44
 
-**tiene_tarjeta_credito**: Si 284, No 216
+**tiene_tarjeta_credito (has credit card)**: Yes 284, No 216
 
-**tiene_cuenta_ahorro**: Si 362, No 138
+**tiene_cuenta_ahorro (has savings account)**: Yes 362, No 138
 
-**tiene_deuda**: No 266, Si 234
+**tiene_deuda (has debt)**: No 266, Yes 234
 
 Phase 2
 
-promt usado
+Prompt used
 
 Based on the exploration, I've identified some data quality issues.
 Please help me clean the dataset.
@@ -98,33 +98,33 @@ Using the file data/latam_finanzas_2025_clean.csv:
 
 Save the script to scripts/02_clean.py
 
-## . Hallazgos y calidad de datos
+## . Findings and data quality
 
 
-### Valores unicos / inconsistencias
-- `industria` tenia "Tecnologia" repartida en 4 variantes (`Tecnologia`, `Tecnologia` sin tilde, `tech`, `TECNOLOGIA`) por errores de captura/mayusculas. - El resto de columnas categoricas (`pais`, `ocupacion`, `meta_financiera`, `tiene_tarjeta_credito`, `tiene_cuenta_ahorro`, `tiene_deuda`) estan limpias, sin typos ni variantes.
-- No se encontraron espacios en blanco al inicio/final en columnas de texto, ni IDs o filas duplicadas.
+### Unique values / inconsistencies
+- `industria` had "Tecnologia" (Technology) split across 4 variants (`Tecnologia`, `Tecnologia` without accent, `tech`, `TECNOLOGIA`) due to capture errors/capitalization. - The rest of the categorical columns (`pais`, `ocupacion`, `meta_financiera`, `tiene_tarjeta_credito`, `tiene_cuenta_ahorro`, `tiene_deuda`) are clean, with no typos or variants.
+- No leading/trailing whitespace was found in text columns, nor duplicate IDs or rows.
 
-### Valores faltantes
-- Unica columna con nulos: `gasto_salud_usd` (33 filas, 6.6%). El resto del dataset esta completo.
+### Missing values
+- Only column with nulls: `gasto_salud_usd` (33 rows, 6.6%). The rest of the dataset is complete.
 
-### Rangos min/max
-- `ahorro_mensual_usd` tiene un minimo de **-160.02**: plausible (mes en que el gasto supero el ingreso), pero se debe confirmar que no sea un error de signo antes de usarlo en calculos agregados.
-- `deuda_total_usd` va de 0 a **10,918.73**, con mediana 0 y media 1,849.69: fuertemente sesgada a la derecha, consistente con que 266/500 personas no tienen deuda (`tiene_deuda` = No). Preferir mediana/percentiles sobre la media para resumir esta columna.
-- `edad` (18-32) y `satisfaccion_financiera` (1-5) tienen rangos acotados y razonables, sin valores fuera de rango.
+### Min/max ranges
+- `ahorro_mensual_usd` has a minimum of **-160.02**: plausible (a month where spending exceeded income), but it should be confirmed that it's not a sign error before using it in aggregate calculations.
+- `deuda_total_usd` ranges from 0 to **10,918.73**, with a median of 0 and mean of 1,849.69: strongly right-skewed, consistent with 266/500 people having no debt (`tiene_deuda` = No). Prefer median/percentiles over the mean to summarize this column.
+- `edad` (age, 18-32) and `satisfaccion_financiera` (financial satisfaction, 1-5) have bounded, reasonable ranges, with no out-of-range values.
 
-###Filas y columnas afectadas 
-Al principio se estandarizaron las categorías en 57 rows, después agregue la columna ahorro negativo, para mayor agilidad al buscar los datos, y rellene gasto_Salud (la columna con valores nulos) con la mediana de los valores, en total 91 rows fueron modificadas.
+### Rows and columns affected 
+At first the categories were standardized across 57 rows, then I added the negative savings column, for greater agility when searching the data, and filled gasto_salud (the column with null values) with the median of the values; in total 91 rows were modified.
 
-use la mediana puesto que una de las filas ya estaba usando ese método y Claude apoyo esa idea, además que estandarice los datos por estética y mayor facilidad al buscar datos
+I used the median since one of the rows was already using that method and Claude supported that idea, and also I standardized the data for aesthetics and easier data searching
 
 Phase 2.5
 
-Promt usado
+Prompt used
 
 ---
 name: country-profiler
-description: Use PROACTIVELY whenever the user asks for a statistical profile, summary, breakdown, or analysis of one or more Latin American countries from the finance dataset (data/latam_finanzas_clean.csv). Triggers on requests like "perfil de México", "analiza Argentina", "dame las estadísticas de Chile", "compara Perú y Brasil", "resumen financiero de Colombia", or any request to profile/summarize/compare countries in the dataset. Also triggers when the user asks to run this for "todos los países" or lists multiple country names together. Returns a Markdown section per country covering sample size, income stats, housing burden, spending breakdown, savings, and AI tool usage.
+description: Use PROACTIVELY whenever the user asks for a statistical profile, summary, breakdown, or analysis of one or more Latin American countries from the finance dataset (data/latam_finanzas_clean.csv). Triggers on requests like "profile of Mexico", "analyze Argentina", "give me the statistics for Chile", "compare Peru and Brazil", "financial summary of Colombia", or any request to profile/summarize/compare countries in the dataset. Also triggers when the user asks to run this for "all countries" or lists multiple country names together. Returns a Markdown section per country covering sample size, income stats, housing burden, spending breakdown, savings, and AI tool usage.
 ---
 You are a data analyst assistant. When given a country name, read
 `data/latam_finanzas_clean.csv` and produce a Markdown section with:
@@ -135,7 +135,7 @@ You are a data analyst assistant. When given a country name, read
 5. Savings: average ahorro_mensual_usd and % of respondents with negative savings
 6. AI tools: average horas_herramientas_ia_semana and average satisfaccion_financiera
 
-Use the country name as the Markdown section header (## País: [name]).
+Use the country name as the Markdown section header (## Country: [name]).
 Save the supporting Python script as scripts/country_[name].py.
 
 If multiple countries are requested at once, invoke this profile process for each country in parallel and combine all sections into a single Markdown file.
@@ -145,10 +145,10 @@ Which country has the highest housing burden? Does it match what you expected? A
 
 Phase 4
 
-Prompt usado 
+Prompt used 
 
-I now have a clean dataset at data/latam\_finanzas\_clean.csv and six country
-profiles already generated in scripts/country\_profiles.md.
+I now have a clean dataset at data/latam_finanzas_clean.csv and six country
+profiles already generated in scripts/country_profiles.md.
 
 Please run the following analyses and show the results as formatted tables.
 For analyses 1 and 6, you may reference the country profiles already generated
@@ -180,68 +180,68 @@ rather than recomputing from scratch.
    Create three groups: Low (0-3 hours/week), Medium (4-10), High (11+).
    For each group: count of respondents, average satisfaction score, 
    and average income. Also calculate the Pearson correlation between 
-   horas\_herramientas\_ia\_semana and satisfaccion\_financiera.
+   horas_herramientas_ia_semana and satisfaccion_financiera.
 
 6. HOUSING BURDEN BY COUNTRY
    Reference the country profiles. Confirm and format the average housing
    expense as % of income for each country, sorted from highest to lowest.
 
-Save the script to scripts/03\_analyse.py
+Save the script to scripts/03_analyse.py
 ```
-Quiero dar a notar que Brasil tiene el mayor ingreso y que la profesion de educador es de las mejores pagadas, me esperaba que el housing fuera lo que mas se gasta del sueldo de los profesionistas.
+I want to point out that Brazil has the highest income and that the teaching profession is among the best paid; I expected housing to be the biggest expense out of professionals' salaries.
 
-Cosas a destacar
+Things to highlight
 
-1.- Argentina tiene la mayor carga de vivienda pero el menor % de ahorro negativo
-2.- Titulares de tarjeta gastan notablemente más en entretenimiento y comida, no solo por tener mayor ingreso
-3.- Clara tendencia creciente: mayor edad → mayor tasa de ahorro
+1.- Argentina has the highest housing burden but the lowest % of negative savings
+2.- Credit card holders spend noticeably more on entertainment and food, not just because of higher income
+3.- Clear upward trend: higher age → higher savings rate
 
 Phase 4.
 
-Using data/latam\_finanzas\_clean.csv, create the following 5 charts.
+Using data/latam_finanzas_clean.csv, create the following 5 charts.
 Save each as a PNG in the charts/ folder with the filenames shown.
 Use a professional color palette (not the default matplotlib colors).
 All charts must have: a clear title, labelled axes, and a source note 
 "Source: Encuesta de Bienestar Financiero LatAm 2025, Futuro Digital LatAm".
 
-1. charts/01\_income\_by\_country.png
+1. charts/01_income_by_country.png
    Box plot showing the income distribution for each country.
    Sort countries by median income (highest on top for a horizontal box plot).
 
-2. charts/02\_age\_vs\_savings.png
+2. charts/02_age_vs_savings.png
    Scatter plot: age on x-axis, monthly savings on y-axis.
    Add a trend line (linear regression). Color points by country.
 
-3. charts/03\_spending\_breakdown.png
+3. charts/03_spending_breakdown.png
    Horizontal bar chart showing the average % of income spent on each 
    expense category (housing, food, transport, entertainment, education, health).
    Sort from highest to lowest percentage.
 
-4. charts/04\_satisfaction\_by\_ai\_usage.png
+4. charts/04_satisfaction_by_ai_usage.png
    Bar chart with three bars: Low / Medium / High AI tool users.
    Y-axis: average financial satisfaction score (1–5).
    Show the exact average value on top of each bar.
 
-5. charts/05\_housing\_burden\_by\_country.png
+5. charts/05_housing_burden_by_country.png
    Horizontal bar chart: average housing cost as % of income, one bar per country.
    Sort from highest to lowest. Use a red-to-green color gradient 
    (high burden = red, low burden = green).
 
-Save the script to scripts/04\_visualise.py
+Save the script to scripts/04_visualise.py
 
 Phase 5
 
-Prompt usado
+Prompt used
 
 I have completed the statistical analysis and created the visualisations.
 Now I need to translate the numbers into clear, actionable insights for 
 a non-technical audience — specifically the leadership team of a nonprofit 
 that designs financial literacy programmes.
 
-Example: “Respondents under 25 save an average of 6% of their income,
+Example: "Respondents under 25 save an average of 6% of their income,
 compared to 15% for those aged 28–32. This sharp increase suggests that
 the 18–25 age group would benefit most from early intervention — specifi
-cally, content about building a savings habit before expenses compound.”
+cally, content about building a savings habit before expenses compound."
 
 For each of these 6 findings, write 3–4 sentences in plain language:
 - What the data shows (the fact)
@@ -262,11 +262,11 @@ REMEMBER that need to be clear enough for someone who has never seen the data.
 
 The reports are in another executive-summary.md
 
-Los reportes son suficientemente claros, una persona sin nada de información podría entenderlo y sin duda proporciona buenas soluciones y acciones
+The reports are clear enough, someone with no background information at all could understand them, and they definitely provide good solutions and actions
 
 Phase 6
 
-Prompt usado
+Prompt used
 
 I now have all the analysis, charts, and interpretations for the project.
 Please write the complete executive report as a Markdown file.
@@ -275,217 +275,217 @@ Save it to analysis-report.md in the project root.
 
 The report must include these sections exactly:
 
-# Datos que Hablan: Bienestar Financiero de Jóvenes Profesionales en América Latina
-## Informe Ejecutivo — Futuro Digital LatAm, 2025
+# Data That Speaks: Financial Wellness of Young Professionals in Latin America
+## Executive Report — Futuro Digital LatAm, 2025
 
-### 1. Resumen Ejecutivo
+### 1. Executive Summary
 A 200-word summary of the 3 most important findings and 2 key recommendations.
 Written for a reader who will only read this section.
 
-### 2. Metodología
-- Dataset: Encuesta de Bienestar Financiero 2025
+### 2. Methodology
+- Dataset: 2025 Financial Wellness Survey
 - Sample: 500 respondents, 6 countries, ages 18–32
 - Data collection and processing approach
 - Data quality issues found and how they were resolved (from Phase 2)
 
-### 3. Perfil de la Muestra
+### 3. Sample Profile
 Describe who the 500 respondents are: countries represented, age distribution,
 industries, occupations. Use specific numbers.
 
-### 4. Hallazgos
+### 4. Findings
 One subsection per analysis from Phase 3.
 Each subsection: the statistical finding + the plain-language interpretation
 from Phase 5 + a reference to the relevant chart (e.g. "see Figure 1").
 
-### 5. Recomendaciones
+### 5. Recommendations
 3–5 numbered recommendations for the financial literacy programme.
 Each recommendation must cite at least one specific finding.
 
-### 6. Conclusión
+### 6. Conclusion
 100 words. What does this data tell us about the state of financial wellness
 among young Latin American professionals?
 
 Use professional Markdown: headers, tables, bold for key numbers,
 chart references as image links where appropriate.
 
-Reporte generado
+Report generated
 
-# Datos que Hablan: Bienestar Financiero de Jóvenes Profesionales en América Latina
-## Informe Ejecutivo — Futuro Digital LatAm, 2025
-
----
-
-### 1. Resumen Ejecutivo
-
-Esta encuesta a 500 profesionales jóvenes (18–32 años) en seis países de América Latina revela tres patrones centrales. Primero, el **ahorro es un hábito que se aprende con la edad**: quienes tienen entre 18 y 22 años ahorran apenas el **5.7%** de su ingreso, mientras que el grupo de 29 a 32 años ahorra el **15.5%** — casi el triple. Segundo, **vivienda y alimentación consumen más de la mitad del ingreso** (28.5% y 23.8% respectivamente), dejando poco margen para el ahorro discrecional, especialmente en Argentina y Chile, donde la vivienda supera el 32% del ingreso. Tercero, existen **brechas económicas marcadas entre países**: el ingreso mediano en Brasil ($1,458) casi duplica al de Argentina ($798), por lo que un programa único para toda la región no será igualmente relevante en todos los mercados.
-
-Dos recomendaciones concentran el mayor impacto potencial: (1) diseñar una intervención temprana de hábito de ahorro dirigida a los 18–25 años, el segmento más numeroso (57% de la muestra) y el que más se beneficiaría de actuar antes de que los gastos se acumulen; y (2) localizar el contenido del programa por país, con módulos específicos de estrategia de vivienda en Argentina y Chile, donde la carga habitacional es estructuralmente más alta.
+# Data That Speaks: Financial Wellness of Young Professionals in Latin America
+## Executive Report — Futuro Digital LatAm, 2025
 
 ---
 
-### 2. Metodología
+### 1. Executive Summary
 
-- **Dataset:** Encuesta de Bienestar Financiero 2025 (Futuro Digital LatAm)
-- **Muestra:** 500 encuestados, 6 países, edades entre 18 y 32 años
-- **Recolección y procesamiento:** los datos se recibieron como un archivo CSV único con 21 variables por respuesta (demográficas, de ingreso, gasto por categoría, ahorro, deuda, tenencia de productos financieros, meta financiera y uso de herramientas de IA). El procesamiento se realizó en Python (pandas) en tres etapas: exploración inicial (`scripts/01_explore.py`), limpieza (`scripts/02_clean.py`) y análisis estadístico (`scripts/03_analyse.py`), con visualizaciones generadas en `scripts/04_visualise.py`.
-- **Calidad de datos — problemas encontrados y resueltos (Fase 2):**
+This survey of 500 young professionals (ages 18–32) across six Latin American countries reveals three central patterns. First, **saving is a habit learned with age**: those aged 18 to 22 save only **5.7%** of their income, while the 29-to-32 age group saves **15.5%** — nearly triple. Second, **housing and food consume more than half of income** (28.5% and 23.8% respectively), leaving little room for discretionary savings, especially in Argentina and Chile, where housing exceeds 32% of income. Third, there are **marked economic gaps between countries**: median income in Brazil ($1,458) is nearly double that of Argentina ($798), meaning a single program for the entire region will not be equally relevant across all markets.
 
-| Problema | Alcance | Resolución |
+Two recommendations carry the greatest potential impact: (1) design an early savings-habit intervention aimed at the 18–25 age group, the largest segment (57% of the sample) and the one that would benefit most from acting before expenses accumulate; and (2) localize program content by country, with dedicated housing-strategy modules in Argentina and Chile, where the housing burden is structurally higher.
+
+---
+
+### 2. Methodology
+
+- **Dataset:** 2025 Financial Wellness Survey (Futuro Digital LatAm)
+- **Sample:** 500 respondents, 6 countries, ages 18 to 32
+- **Collection and processing:** the data was received as a single CSV file with 21 variables per response (demographic, income, spending by category, savings, debt, financial product ownership, financial goal, and AI tool usage). Processing was done in Python (pandas) in three stages: initial exploration (`scripts/01_explore.py`), cleaning (`scripts/02_clean.py`), and statistical analysis (`scripts/03_analyse.py`), with visualizations generated in `scripts/04_visualise.py`.
+- **Data quality — issues found and resolved (Phase 2):**
+
+| Issue | Scope | Resolution |
 |---|---|---|
-| Categorías inconsistentes en `industria` (variantes de "Tecnología": mayúsculas, sin tilde, abreviatura "tech") | 10 de 500 filas | Se estandarizaron a una sola categoría mediante normalización de texto (minúsculas, sin acentos, mapeo de sinónimos) |
-| Valores faltantes en `gasto_salud_usd` | 33 filas (6.6%) | Imputados con la mediana de la columna ($45.66 USD), por ser el porcentaje de faltantes bajo y la mediana robusta ante sesgo |
-| Ahorro mensual negativo (`ahorro_mensual_usd` < 0) | 74 filas (14.8%) | Son datos válidos (gasto mayor al ingreso ese mes); se conservaron y se marcaron con la columna booleana `ahorro_negativo` en lugar de eliminarse |
-| Texto con acentos/caracteres mal codificados en columnas de texto | 1,574 valores en 8 columnas | Normalizados a ASCII plano (ej. "México" → "Mexico") |
-| Duplicados y espacios en blanco | 0 encontrados | No requirió acción |
+| Inconsistent categories in `industria` ("Technology" variants: uppercase, no accent, abbreviation "tech") | 10 of 500 rows | Standardized into a single category through text normalization (lowercase, no accents, synonym mapping) |
+| Missing values in `gasto_salud_usd` | 33 rows (6.6%) | Imputed with the column median ($45.66 USD), since the missing percentage was low and the median is robust to skew |
+| Negative monthly savings (`ahorro_mensual_usd` < 0) | 74 rows (14.8%) | Valid data (spending exceeded income that month); kept and flagged with the boolean column `ahorro_negativo` instead of being removed |
+| Text with accented/mis-encoded characters in text columns | 1,574 values across 8 columns | Normalized to plain ASCII (e.g. "México" → "Mexico") |
+| Duplicates and whitespace | 0 found | No action required |
 
-El dataset limpio final (500 filas × 22 columnas, tras añadir `ahorro_negativo`) se guardó en `data/latam_finanzas_clean.csv` y es la fuente de todos los análisis de este informe.
+The final clean dataset (500 rows × 22 columns, after adding `ahorro_negativo`) was saved to `data/latam_finanzas_clean.csv` and is the source for all analyses in this report.
 
 ---
 
-### 3. Perfil de la Muestra
+### 3. Sample Profile
 
-La muestra está compuesta por **500 profesionales jóvenes** distribuidos en **6 países**:
+The sample consists of **500 young professionals** distributed across **6 countries**:
 
-| País | Encuestados | % de la muestra |
+| Country | Respondents | % of sample |
 |---|---|---|
-| México | 150 | 30.0% |
+| Mexico | 150 | 30.0% |
 | Colombia | 80 | 16.0% |
 | Argentina | 70 | 14.0% |
 | Chile | 70 | 14.0% |
-| Brasil | 65 | 13.0% |
-| Perú | 65 | 13.0% |
+| Brazil | 65 | 13.0% |
+| Peru | 65 | 13.0% |
 
-**Edad:** el rango es de 18 a 32 años, con una edad mediana de 25 años (promedio 24.96, desviación estándar 4.2). La distribución por grupo etario:
+**Age:** the range is 18 to 32 years, with a median age of 25 (mean 24.96, standard deviation 4.2). Distribution by age group:
 
-| Grupo de edad | Encuestados | % de la muestra |
+| Age group | Respondents | % of sample |
 |---|---|---|
 | 18–22 | 162 | 32.4% |
 | 23–25 | 123 | 24.6% |
 | 26–28 | 87 | 17.4% |
 | 29–32 | 128 | 25.6% |
 
-Casi un tercio de la muestra (32.4%) tiene entre 18 y 22 años, y más de la mitad (57.0%) tiene 25 años o menos.
+Nearly a third of the sample (32.4%) is between 18 and 22 years old, and more than half (57.0%) is 25 or younger.
 
-**Industria:** los encuestados provienen de 10 sectores, liderados por Finanzas (66), Tecnología (57) e Ingeniería (53); le siguen Ventas (51), Salud (49), Marketing (49), Educación (45), Diseño (45), Recursos Humanos (44) y Retail (41).
+**Industry:** respondents come from 10 sectors, led by Finance (66), Technology (57), and Engineering (53); followed by Sales (51), Health (49), Marketing (49), Education (45), Design (45), Human Resources (44), and Retail (41).
 
-**Ocupación:** las ocupaciones más comunes son Diseñador Gráfico (56), Ingeniero (55), Community Manager (52), Gerente de Proyectos (51), Contador (50) y Analista Financiero (50), seguidas de Representante de Ventas (49), Coordinador de Marketing (47), Especialista en RRHH (47) y Docente (43).
+**Occupation:** the most common occupations are Graphic Designer (56), Engineer (55), Community Manager (52), Project Manager (51), Accountant (50), and Financial Analyst (50), followed by Sales Representative (49), Marketing Coordinator (47), HR Specialist (47), and Teacher (43).
 
-**Productos financieros:** el 56.8% (284/500) tiene tarjeta de crédito, el 72.4% (362/500) tiene cuenta de ahorro, y el 46.8% (234/500) reporta tener deuda actualmente.
+**Financial products:** 56.8% (284/500) have a credit card, 72.4% (362/500) have a savings account, and 46.8% (234/500) report currently having debt.
 
 ---
 
-### 4. Hallazgos
+### 4. Findings
 
-#### 4.1 Diferencias de ingreso entre países
+#### 4.1 Income differences across countries
 
-El ingreso mensual mediano varía de **$798 USD en Argentina a $1,458 USD en Brasil** — casi el doble. Brasil también presenta la mayor dispersión interna de ingresos (desviación estándar de $592, frente a $189–$290 en el resto), lo que indica una muestra brasileña mucho más heterogénea en términos económicos.
+Median monthly income ranges from **$798 USD in Argentina to $1,458 USD in Brazil** — nearly double. Brazil also shows the greatest internal income dispersion (standard deviation of $592, versus $189–$290 in the rest), indicating a much more economically heterogeneous Brazilian sample.
 
-| País | Mediana | Media | Mín | Máx | Desv. estándar |
+| Country | Median | Mean | Min | Max | Std. Dev. |
 |---|---|---|---|---|---|
-| Brasil | $1,458 | $1,388 | $300 | $2,874 | $592 |
+| Brazil | $1,458 | $1,388 | $300 | $2,874 | $592 |
 | Chile | $1,246 | $1,245 | $575 | $1,861 | $290 |
-| México | $1,067 | $1,042 | $300 | $1,693 | $287 |
+| Mexico | $1,067 | $1,042 | $300 | $1,693 | $287 |
 | Colombia | $857 | $849 | $405 | $1,363 | $189 |
-| Perú | $822 | $818 | $362 | $1,342 | $208 |
+| Peru | $822 | $818 | $362 | $1,342 | $208 |
 | Argentina | $798 | $766 | $373 | $1,343 | $204 |
 
-*Ver Figura 1 (`charts/01_income_by_country.png`).*
+*See Figure 1 (`charts/01_income_by_country.png`).*
 
-Estas diferencias implican que un currículo único, calibrado con un solo nivel de ingreso "promedio regional", resultará irrelevante en algunos mercados e inaccesible en otros. **Recomendación derivada:** localizar los ejemplos y umbrales de presupuesto del programa por país, y considerar contenido segmentado en Brasil dada su alta dispersión interna.
+These differences mean that a single curriculum, calibrated to one "regional average" income level, will be irrelevant in some markets and inaccessible in others. **Resulting recommendation:** localize the program's budget examples and thresholds by country, and consider segmented content for Brazil given its high internal dispersion.
 
-#### 4.2 Relación entre edad y comportamiento de ahorro
+#### 4.2 Relationship between age and savings behavior
 
-La tasa de ahorro casi se triplica con la edad: el grupo de 18–22 años ahorra en promedio **$61/mes (5.7% del ingreso)**, mientras que el grupo de 29–32 años ahorra **$154/mes (15.5%)**.
+The savings rate nearly triples with age: the 18–22 age group saves on average **$61/month (5.7% of income)**, while the 29–32 group saves **$154/month (15.5%)**.
 
-| Grupo de edad | Ahorro mensual promedio | Tasa de ahorro promedio | n |
+| Age group | Average monthly savings | Average savings rate | n |
 |---|---|---|---|
 | 18–22 | $60.80 | 5.72% | 162 |
 | 23–25 | $76.48 | 8.32% | 123 |
 | 26–28 | $120.98 | 11.72% | 87 |
 | 29–32 | $154.07 | 15.52% | 128 |
 
-*Ver Figura 2 (`charts/02_age_vs_savings.png`).*
+*See Figure 2 (`charts/02_age_vs_savings.png`).*
 
-Dado que el hábito de ahorro se fortalece con el tiempo y este segmento joven representa más de la mitad de la muestra, intervenir temprano tiene un efecto compuesto de largo plazo. **Recomendación derivada:** priorizar un módulo de "hábito de ahorro" para el segmento de 18–25 años, antes de que los gastos se acumulen.
+Since the savings habit strengthens over time and this young segment represents more than half the sample, intervening early has a long-term compounding effect. **Resulting recommendation:** prioritize a "savings habit" module for the 18–25 age segment, before expenses accumulate.
 
-#### 4.3 Dónde se concentra el gasto
+#### 4.3 Where spending is concentrated
 
-Vivienda (**28.5%** del ingreso) y alimentación (**23.8%**) son, por mucho, las categorías de mayor peso, sumando más de la mitad del ingreso mensual promedio. Le siguen transporte (10.1%), entretenimiento (8.7%), educación (8.5%) y salud (4.9%), la categoría más pequeña.
+Housing (**28.5%** of income) and food (**23.8%**) are by far the heaviest categories, together accounting for more than half of average monthly income. They are followed by transport (10.1%), entertainment (8.7%), education (8.5%), and health (4.9%), the smallest category.
 
-| Categoría | % promedio del ingreso |
+| Category | Average % of income |
 |---|---|
-| Vivienda | 28.5% |
-| Alimentación | 23.8% |
-| Transporte | 10.1% |
-| Entretenimiento | 8.7% |
-| Educación | 8.5% |
-| Salud | 4.9% |
+| Housing | 28.5% |
+| Food | 23.8% |
+| Transport | 10.1% |
+| Entertainment | 8.7% |
+| Education | 8.5% |
+| Health | 4.9% |
 
-*Ver Figura 3 (`charts/03_spending_breakdown.png`).*
+*See Figure 3 (`charts/03_spending_breakdown.png`).*
 
-Como vivienda y alimentación son mayormente gastos no discrecionales, consejos genéricos de "gastar menos" tendrán poco efecto: la palanca real está en cómo se gestionan específicamente estas dos categorías. **Recomendación derivada:** construir el currículo base alrededor de estrategias concretas de vivienda (ej. compartir gastos, relación renta/ingreso) y planificación inteligente de alimentación.
+Since housing and food are mostly non-discretionary expenses, generic "spend less" advice will have little effect: the real lever is how these two categories are specifically managed. **Resulting recommendation:** build the core curriculum around concrete housing strategies (e.g. cost-sharing, rent-to-income ratio) and smart food planning.
 
-#### 4.4 Titulares de tarjeta de crédito frente a no titulares
+#### 4.4 Credit card holders vs. non-holders
 
-Los titulares de tarjeta de crédito ganan apenas **1.5% más** que los no titulares en promedio — una diferencia casi nula — pero gastan **16.1% más en alimentación** y **17.2% más en entretenimiento**. A pesar de este mayor gasto, ahorran **6.7% más**, lo que indica que la tarjeta cambia el comportamiento de gasto de forma independiente del nivel de ingreso.
+Credit card holders earn only **1.5% more** than non-holders on average — an almost negligible difference — but spend **16.1% more on food** and **17.2% more on entertainment**. Despite this higher spending, they save **6.7% more**, indicating that the card changes spending behavior independently of income level.
 
-| Grupo | Ingreso promedio | Gasto en alimentación | Gasto en entretenimiento | Ahorro promedio |
+| Group | Average income | Food spending | Entertainment spending | Average savings |
 |---|---|---|---|---|
-| Con tarjeta de crédito | $1,023 | $258 | $95 | $102 |
-| Sin tarjeta de crédito | $1,008 | $222 | $81 | $95 |
-| Diferencia % | +1.5% | +16.1% | +17.2% | +6.7% |
+| With credit card | $1,023 | $258 | $95 | $102 |
+| Without credit card | $1,008 | $222 | $81 | $95 |
+| % difference | +1.5% | +16.1% | +17.2% | +6.7% |
 
-*(Este hallazgo se presenta como tabla; no tiene gráfico dedicado entre las 5 visualizaciones del proyecto — ver tabla completa en `scripts/03_analyse.py`, sección 4.)*
+*(This finding is presented as a table; it does not have a dedicated chart among the project's 5 visualizations — see the full table in `scripts/03_analyse.py`, section 4.)*
 
-Como el ingreso no explica esta diferencia, el foco del programa para este grupo debe ser el comportamiento, no la generación de ingresos. **Recomendación derivada:** para titulares de tarjeta, incluir un módulo de conciencia de gasto discrecional ("conoce tu fuga") en alimentación y entretenimiento.
+Since income does not explain this difference, the program's focus for this group should be behavior, not income generation. **Resulting recommendation:** for credit card holders, include a discretionary-spending awareness module ("know your leak") for food and entertainment.
 
-#### 4.5 Uso de herramientas de IA y satisfacción financiera
+#### 4.5 AI tool usage and financial satisfaction
 
-La satisfacción financiera aumenta con el uso de herramientas de IA: el grupo de uso bajo (0–3 hrs/semana, 150 personas) reporta 2.11 sobre 5, el de uso medio (4–10 hrs/semana, 335 personas) reporta 2.60, y el de uso alto (11+ hrs/semana, solo 15 personas) reporta 3.53. La correlación de Pearson entre horas de uso y satisfacción es **r = 0.571** (moderada-positiva).
+Financial satisfaction increases with AI tool usage: the low-usage group (0–3 hrs/week, 150 people) reports 2.11 out of 5, the medium-usage group (4–10 hrs/week, 335 people) reports 2.60, and the high-usage group (11+ hrs/week, only 15 people) reports 3.53. The Pearson correlation between hours of use and satisfaction is **r = 0.571** (moderate-positive).
 
-| Grupo de uso de IA | n | Satisfacción promedio | Ingreso promedio |
+| AI usage group | n | Average satisfaction | Average income |
 |---|---|---|---|
-| Bajo (0–3 hrs) | 150 | 2.11 | $776 |
-| Medio (4–10 hrs) | 335 | 2.60 | $1,085 |
-| Alto (11+ hrs) | 15 | 3.53 | $1,895 |
+| Low (0–3 hrs) | 150 | 2.11 | $776 |
+| Medium (4–10 hrs) | 335 | 2.60 | $1,085 |
+| High (11+ hrs) | 15 | 3.53 | $1,895 |
 
-*Ver Figura 4 (`charts/04_satisfaction_by_ai_usage.png`).*
+*See Figure 4 (`charts/04_satisfaction_by_ai_usage.png`).*
 
-Sin embargo, el grupo de uso alto también tiene el ingreso más alto por un amplio margen y es una submuestra muy pequeña (15 personas), por lo que esta relación probablemente refleja acceso a herramientas más que un efecto causal directo del uso de IA sobre la satisfacción. **Recomendación derivada:** tratar esto como una brecha de acceso, no como causalidad comprobada, e introducir alfabetización básica en herramientas de presupuesto con IA para participantes de menores ingresos.
+However, the high-usage group also has the highest income by a wide margin and is a very small subsample (15 people), so this relationship likely reflects access to tools rather than a direct causal effect of AI usage on satisfaction. **Resulting recommendation:** treat this as an access gap, not proven causation, and introduce basic literacy in AI budgeting tools for lower-income participants.
 
-#### 4.6 Carga de vivienda por país
+#### 4.6 Housing burden by country
 
-El costo de vivienda como porcentaje del ingreso varía de **24.6% en Perú a 34.1% en Argentina**, con Argentina y Chile superando el umbral de asequibilidad del 30% comúnmente citado en literatura de vivienda.
+Housing cost as a percentage of income ranges from **24.6% in Peru to 34.1% in Argentina**, with Argentina and Chile exceeding the 30% affordability threshold commonly cited in housing literature.
 
-| País | Vivienda (% del ingreso) |
+| Country | Housing (% of income) |
 |---|---|
 | Argentina | 34.1% |
 | Chile | 32.6% |
-| México | 28.1% |
-| Brasil | 26.9% |
+| Mexico | 28.1% |
+| Brazil | 26.9% |
 | Colombia | 25.4% |
-| Perú | 24.6% |
+| Peru | 24.6% |
 
-*Ver Figura 5 (`charts/05_housing_burden_by_country.png`).*
+*See Figure 5 (`charts/05_housing_burden_by_country.png`).*
 
-En Argentina y Chile, la presión de vivienda es una restricción estructural: ninguna habilidad de presupuesto puede compensar por completo un costo fijo que ya es inasequible. **Recomendación derivada:** para estos dos países, incluir un módulo dedicado de estrategia de vivienda (vivienda compartida, negociación de renta, navegación de subsidios), en lugar de tratar la vivienda como un gasto discrecional más.
-
----
-
-### 5. Recomendaciones
-
-1. **Priorizar un módulo de hábito de ahorro temprano para el segmento de 18–25 años.** Este grupo ahorra apenas 5.7%–8.3% de su ingreso frente al 15.5% del grupo de 29–32 años (Hallazgo 4.2), y representa el 57% de la muestra — el mayor alcance potencial del programa.
-
-2. **Construir el currículo base alrededor de vivienda y alimentación, no de categorías de gasto genéricas.** Estas dos categorías consumen más de la mitad del ingreso promedio (Hallazgo 4.3), por lo que son la palanca de mayor impacto real sobre las finanzas de los participantes.
-
-3. **Localizar el contenido por país, con un módulo específico de estrategia de vivienda para Argentina y Chile.** El ingreso mediano varía casi al doble entre países (Hallazgo 4.1), y la carga de vivienda en Argentina (34.1%) y Chile (32.6%) supera el umbral de asequibilidad del 30% (Hallazgo 4.6).
-
-4. **Incluir un módulo de conciencia de gasto discrecional para titulares de tarjeta de crédito.** Este grupo gasta 16–17% más en alimentación y entretenimiento sin una diferencia significativa de ingreso (Hallazgo 4.4), lo que apunta a un problema de comportamiento, no de capacidad económica.
-
-5. **Incorporar alfabetización básica en herramientas de presupuesto con IA, dirigida a participantes de menor ingreso.** El uso de estas herramientas está asociado con mayor satisfacción financiera (r=0.571, Hallazgo 4.5), pero su adopción parece concentrada en el segmento de mayores ingresos, dejando una brecha de acceso por cerrar.
+In Argentina and Chile, housing pressure is a structural constraint: no budgeting skill can fully offset a fixed cost that is already unaffordable. **Resulting recommendation:** for these two countries, include a dedicated housing-strategy module (shared housing, rent negotiation, subsidy navigation), rather than treating housing as just another discretionary expense.
 
 ---
 
-### 6. Conclusión
+### 5. Recommendations
 
-Los datos muestran una población financieramente activa pero desigualmente preparada: el ahorro es un músculo que se desarrolla con la edad, no algo con lo que los jóvenes de 18–25 años ya cuenten, y los costos fijos de vivienda y alimentación —agravados en países como Argentina y Chile— limitan cuánto puede lograr la educación financiera por sí sola. El bienestar financiero de esta generación no depende solo de mejores hábitos individuales, sino de programas que reconozcan las diferencias estructurales entre países, edades y niveles de acceso a herramientas financieras.
+1. **Prioritize an early savings-habit module for the 18–25 age segment.** This group saves only 5.7%–8.3% of its income compared to 15.5% for the 29–32 group (Finding 4.2), and represents 57% of the sample — the program's greatest potential reach.
+
+2. **Build the core curriculum around housing and food, not generic spending categories.** These two categories consume more than half of average income (Finding 4.3), making them the highest-impact real lever on participants' finances.
+
+3. **Localize content by country, with a specific housing-strategy module for Argentina and Chile.** Median income varies by nearly double between countries (Finding 4.1), and the housing burden in Argentina (34.1%) and Chile (32.6%) exceeds the 30% affordability threshold (Finding 4.6).
+
+4. **Include a discretionary-spending awareness module for credit card holders.** This group spends 16–17% more on food and entertainment with no significant income difference (Finding 4.4), pointing to a behavioral rather than economic-capacity issue.
+
+5. **Introduce basic literacy in AI budgeting tools, aimed at lower-income participants.** Use of these tools is associated with higher financial satisfaction (r=0.571, Finding 4.5), but adoption appears concentrated in the higher-income segment, leaving an access gap to close.
+
+---
+
+### 6. Conclusion
+
+The data shows a financially active but unevenly prepared population: saving is a muscle that develops with age, not something 18–25 year-olds already have, and fixed housing and food costs — worsened in countries like Argentina and Chile — limit how much financial education alone can achieve. This generation's financial wellbeing depends not only on better individual habits, but on programs that recognize the structural differences between countries, ages, and levels of access to financial tools.
